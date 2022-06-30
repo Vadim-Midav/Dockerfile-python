@@ -1,0 +1,3 @@
+#!/bin/bash
+docker build -t my_python -f Dockerfile-python .
+docker run my_python

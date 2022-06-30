@@ -1,0 +1,13 @@
+FROM python:3.8.13-slim
+
+RUN useradd python
+
+WORKDIR /dir
+
+COPY ./main.py .
+
+RUN chmod +x main.py && chown -R python:python /dir
+
+USER python
+
+CMD [ "python", "./main.py" ]
